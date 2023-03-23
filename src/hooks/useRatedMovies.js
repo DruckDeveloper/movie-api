@@ -7,13 +7,13 @@ const useRatedMovies = () => {
 
   useEffect(() => {
     fetch(topRatedMoviesUrl)
-      .then(Response => Response.json())
+      .then(response => response.json())
       .then(data => {
-        setRatedMovies(data.result)
+        setRatedMovies(data.results)
         setLoadingRated(false)
       })
   }, [])
-
+  console.log(ratedMovies)
   return { ratedMovies, loadingRated }
 }
 
