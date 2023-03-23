@@ -11,8 +11,7 @@ const useSearchMovie = userMovie => {
     fetch(apiSearchUrl + userMovie)
       .then(response => response.json())
       .then(data => {
-        console.log(data)
-        setMovies(data.results)
+        setMovies(data.results.filter(movie => movie.poster_path))
         setLoading(false)
       })
       .catch(error => console.log(error))

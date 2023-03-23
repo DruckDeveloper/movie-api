@@ -12,6 +12,7 @@ const usePopularMovies = () => {
         setMovies(data.results)
         setLoading(false)
       })
+      .catch(error => console.log(error))
   }, [])
   console.log(popularMovies)
   return { popularMovies, loading }
