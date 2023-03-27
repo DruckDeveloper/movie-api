@@ -20,7 +20,7 @@ const Search = () => {
           value={form}
           onChange={e => setForm(e.target.value)}
         />
-        <button type='submit'>buscar</button>
+        <button className='search__form--submit' type='submit'>buscar</button>
       </form>
       {loading ? <p>Loading</p> : <MovieList movies={movies} />}
     </section>

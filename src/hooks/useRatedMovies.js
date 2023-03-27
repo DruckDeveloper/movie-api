@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { topRatedMoviesUrl } from '../constants/constants'
 
 const useRatedMovies = () => {
-  const [ratedMovies, setRatedMovies] = useState({})
+  const [ratedMovies, setRatedMovies] = useState([])
   const [loadingRated, setLoadingRated] = useState(true)
 
   useEffect(() => {
@@ -13,7 +13,7 @@ const useRatedMovies = () => {
         setLoadingRated(false)
       })
   }, [])
-  console.log(ratedMovies)
+
   return { ratedMovies, loadingRated }
 }
 
